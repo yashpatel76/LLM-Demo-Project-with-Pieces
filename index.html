@@ -6,46 +6,80 @@
     <title>Random Fun Facts</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f0f0f0;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
         }
 
         .container {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .fact-section {
             text-align: center;
-            background-color: #fff;
+            width: 45%;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .fact-section:hover {
+            transform: translateY(-10px);
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            min-height: 60px;
         }
 
         button {
             margin-top: 20px;
-            padding: 10px 20px;
+            padding: 12px 25px;
             font-size: 16px;
             cursor: pointer;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
             background-color: #007BFF;
             color: white;
-            margin-right: 10px;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         button:hover {
             background-color: #0056b3;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Random Fun Facts</h1>
-        <p id="fact"></p>
-        <button onclick="generateAirportFact()">Generate Airport Fact</button>
-        <button onclick="generateFlightFact()">Generate Flight Fact</button>
+        <div class="fact-section">
+            <h2>Airport Facts</h2>
+            <p id="airport-fact"></p>
+            <button onclick="generateAirportFact()">Generate Airport Fact</button>
+        </div>
+        <div class="fact-section">
+            <h2>Flight Facts</h2>
+            <p id="flight-fact"></p>
+            <button onclick="generateFlightFact()">Generate Flight Fact</button>
+        </div>
     </div>
     <script>
         const airportFacts = [
@@ -76,12 +110,12 @@
 
         function generateAirportFact() {
             const randomIndex = Math.floor(Math.random() * airportFacts.length);
-            document.getElementById('fact').innerText = airportFacts[randomIndex];
+            document.getElementById('airport-fact').innerText = airportFacts[randomIndex];
         }
 
         function generateFlightFact() {
             const randomIndex = Math.floor(Math.random() * flightFacts.length);
-            document.getElementById('fact').innerText = flightFacts[randomIndex];
+            document.getElementById('flight-fact').innerText = flightFacts[randomIndex];
         }
     </script>
 </body>

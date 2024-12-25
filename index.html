@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Airport Fact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Airport Fact</h1>
+        <p id="fact"></p>
+        <button onclick="generateFact()">Generate Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "The world's busiest airport by passenger traffic is Hartsfield-Jackson Atlanta International Airport in Atlanta, Georgia, USA.",
+            "The longest commercial flight route is from Singapore to Newark, covering approximately 9,534 miles.",
+            "The shortest commercial flight in the world is between the Scottish islands of Westray and Papa Westray, lasting about 1.5 minutes.",
+            "The world's largest airport by land area is King Fahd International Airport in Dammam, Saudi Arabia.",
+            "The first commercial flight took place on January 1, 1914, from St. Petersburg to Tampa, Florida.",
+            "The Boeing 747, known as the 'Queen of the Skies,' was the first wide-body airplane ever produced.",
+            "The busiest single-runway airport in the world is Gatwick Airport in London.",
+            "Denver International Airport has the longest public-use runway in the United States.",
+            "The world's highest airport is Daocheng Yading Airport in China, situated at 14,472 feet above sea level.",
+            "The Concorde, a supersonic passenger airliner, could fly from New York to London in under 3.5 hours.",
+            "The world's first airport was College Park Airport in Maryland, USA, established in 1909.",
+            "The world's largest airline by fleet size is American Airlines.",
+            "The world's largest passenger plane is the Airbus A380.",
+            "The busiest airport in Europe by passenger traffic is London Heathrow Airport.",
+            "The first airport to introduce a moving walkway was Dallas Love Field in 1958.",
+            "The world's first duty-free shop opened at Shannon Airport in Ireland in 1947.",
+            "The world's first airport hotel was the Hilton at San Francisco International Airport, opened in 1959.",
+            "The world's first airport to have a control tower was Cleveland Hopkins International Airport in 1930.",
+            "The world's first commercial jet airliner was the de Havilland Comet.",
+            "The world's first airport to have an automated baggage handling system was Frankfurt Airport in Germany.",
+            "The world's first airport to have a dedicated terminal for low-cost carriers was Singapore Changi Airport.",
+            "The world's first airport to have a rooftop swimming pool is Singapore Changi Airport.",
+            "The world's first airport to have a butterfly garden is Singapore Changi Airport.",
+            "The world's first airport to have a cinema is Singapore Changi Airport.",
+            "The world's first airport to have a sunflower garden is Singapore Changi Airport.",
+            "The world's first airport to have a cactus garden is Singapore Changi Airport.",
+            "The world's first airport to have a koi pond is Singapore Changi Airport.",
+            "The world's first airport to have a hedge maze is Singapore Changi Airport.",
+            "The world's first airport to have a slide is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use gaming area is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use movie theater is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use music corner is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use social tree is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use interactive art installation is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use digital experience studio is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use virtual reality zone is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use augmented reality zone is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use holographic display is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use 3D printing station is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use robotics lab is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use drone zone is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use AI zone is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use blockchain zone is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use quantum computing zone is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use nanotechnology zone is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use biotechnology zone is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use neuroscience zone is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use cognitive science zone is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use linguistics zone is Singapore Changi Airport.",
+            "The world's first airport to have a free-to-use anthropology zone is Singapore Changi Airport."
+        ];
+
+        function generateFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
